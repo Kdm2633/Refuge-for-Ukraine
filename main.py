@@ -26,10 +26,10 @@ pd.set_option('display.width', 1000)
 pd.set_option('display.max_rows', 200)
 # print(refugee_data)
 
-# Healthcare Facilities Data
-healthcare_data = pd.read_csv('data/health_facilities.csv')
-ukr_geo = gpd.read_file(
-    'data/ukr_geo.json')  #administrative divisions shapefile
+# # Healthcare Facilities Data
+# healthcare_data = pd.read_csv('data/health_facilities.csv')
+# ukr_geo = gpd.read_file(
+#     'data/ukr_geo.json')  #administrative divisions shapefile
 
 # print(ukr_geo)
 
