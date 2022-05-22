@@ -27,7 +27,7 @@ font-family: 'Roboto', sans-serif; */
   /* Desktop Version */
   @media (min-width: 768px) {
     #header {
-      position: absolute;
+
       top: 0;
       left: 0;
       width: 100%;
@@ -35,12 +35,12 @@ font-family: 'Roboto', sans-serif; */
       justify-content: space-between;
       align-items: center;
       z-index: 1000;
-      background: none;
+      background-color: var(--grey);
       margin-top: 2%;
     }
   
     #header .logo {
-      color: var(--black);
+      color: var(--whiteish);
       
       font-weight: 900;
       font-size: 2rem;
@@ -64,15 +64,15 @@ font-family: 'Roboto', sans-serif; */
     #header #desktop-nav li a {
       text-decoration: none;
       padding: 6px 15px;
-      color: var(--black);
+      color: var(--whiteish);
       border-radius: 20px;
     }
   
     #header #desktop-nav li a:hover {
-      background-color: white;
+      background-color: black;
       border-radius: 20px;
       padding: 6px 15px;
-      color: black;
+      color: white;
     }
     #section {
       position: relative;
@@ -103,40 +103,17 @@ font-family: 'Roboto', sans-serif; */
       padding: 20px 30px;
     }
   
-    .about-section {
-      position: relative;
-      padding: 100px;
-      background: black;
-      color: var(--whiteish);
-      z-index: 100000;
-    }
-  
-    .about-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      font-weight: 900;
-    }
-  
-    .about-section p {
-      font-size: 1.5rem;
-    }
-  
-    #footer {
-      background: linear-gradient(180deg, black, var(--grey));
-      color: var(--whiteish);
-      padding: 2%;
-    }
+   
   }
   
   /* Mobile Version */
   @media (max-width: 768px) {
     #header {
-      position: absolute;
       top: 0;
       left: 0;
       width: 100%;
       z-index: 1000;
-      background: none;
+      background-color: var(--grey);
     }
     
     #mobile-nav {
@@ -149,7 +126,7 @@ font-family: 'Roboto', sans-serif; */
     }
   
     #mobile-nav a {
-      color: black;
+      color: var(--whiteish);
       padding: 14px 16px;
       text-decoration: none;
       font-size: 17px;
@@ -157,7 +134,7 @@ font-family: 'Roboto', sans-serif; */
     }
   
     #mobile-nav .mobile-logo {
-      color: var(--black);
+      color: var(--whiteish);
       font-weight: 900;
     }
   
@@ -166,13 +143,10 @@ font-family: 'Roboto', sans-serif; */
       display: block;
       position: absolute;
       right: 0;
-      top: 0;
+      top: -3%;
     }
   
-    #mobile-nav a:hover {
-      background-color: var(--whiteish);
-      color: black;
-    }
+
   
     .active-mobile {
       background-color: rgba(161, 164, 183, 1);
@@ -208,24 +182,7 @@ font-family: 'Roboto', sans-serif; */
       padding: 8px 20px;
     }
   
-    .about-section {
-      position: relative;
-      padding: 50px;
-      background: black;
-      color: var(--whiteish);
-      z-index: 100000;
-    }
-  
-    .about-section h2 {
-      font-size: 2.5rem;
-      margin-bottom: 10px;
-      font-weight: 900;
-    }
-  
-    .about-section p {
-      font-size: 1.5rem;
-    }
-  }
+    
   
   /* Blocking Mobile and Desktop Navs */
   @media (min-width: 768px) {
@@ -322,7 +279,7 @@ font-family: 'Roboto', sans-serif; */
   /* Footer */
   
   #footer {
-    background: var(--black);
+    background-color: (var(--grey));
     color: var(--whiteish);
     padding: 2%;
   }

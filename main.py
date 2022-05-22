@@ -25,26 +25,31 @@ refugee_data = world.merge(refugee_data,
                            right_on=['Name'])
 cols = refugee_data.columns[6:]
 refugee_data = refugee_data.dropna(subset=cols, how='all')
-pd.set_option('display.max_columns', 20)
+pd.set_option('display.max_columns', 10)
 pd.set_option('display.width', 1000)
 pd.set_option('display.max_rows', 200)
-pd.set_option()
+
 # print(refugee_data)
 
 #ploting bubbles on map
 #Arrays of country coordinates
 long = []
-lat = []
+latitude = []
 
 def plot_circles():
-  #for x in range (0, refugee_data["Name"].len):
-  print(refugee_data["Name"])
+  #for x in range (0, len(refugee_data["Name"])):
+    #
+  print(refugee_data["Name"])  
+  
 
 plot_circles()
 # # Healthcare Facilities Data
 healthcare_data = pd.read_csv('data/health_facilities.csv')
 ukr_geo = gpd.read_file('data/ukr_geo.json')  #administrative divisions shapefile
-
+# healthcare_data = ukr_geo.merge(healthcare_data,
+#                            how='left',
+#                            left_on=['name_1'],
+#                            right_on=['Region'])
 # print(ukr_geo)
 
 # Mapping
