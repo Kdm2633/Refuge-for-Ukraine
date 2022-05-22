@@ -279,9 +279,9 @@ font-family: 'Roboto', sans-serif; */
   /* Footer */
   
   #footer {
-    background-color: (var(--grey));
-    color: var(--whiteish);
-    padding: 2%;
+      background-color: var(--grey);
+      color: var(--whiteish);
+      padding: 2%;
   }
   
   #footer p {
