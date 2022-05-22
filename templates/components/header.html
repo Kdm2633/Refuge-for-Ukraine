@@ -4,30 +4,34 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </script>
      <!--Font Awesome-->
      <script src="https://kit.fontawesome.com/4336aaf0f1.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
-    <!-- Google Fonts -->
-    <style>@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Roboto&display=swap');</style>
-    <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <!-- My CSS -->
-    <link rel="stylesheet" type=text/css href="{{ url_for('static', filename='css/homepage/style.css') }}">
-    <title>Document</title>
+     <!-- Fonts -->
+     <style>@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Roboto&display=swap');</style>
+    <!-- Styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage/style.css') }}">
+    <title></title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link " aria-current="page" href="#">Home</a>
-                </li>
-                </ul>
-          </div>
+    <header>
+            <a href="index.html" class="logo">Placeholder</a>
+            <ul id="desktop-nav">
+                <li id="active-desktop"><a href="">Home</a></li>
+                <li><a href="">Refugge Movments</a></li>
+                <li><a href="">Placeholder</a></li>
+                <li><a href="">Placeholder</a></li>
+            </ul>
+        <div id="mobile-nav">
+            <a href="index.html" class="mobile-logo">Placeholder</a>
+            <div id="nav-items">
+                <a class="active-mobile" href="index.html" class="">Home</a>
+                <a href="" class="">Refugee Movments</a>
+                <a href="" class="">Placeholder</a>
+                <a href="">Placeholder</a>
+            </div>
+            <a href="javascript:void(0)" class="icon" onclick="Open()"><i class="fa fa-bars"></i></a>
         </div>
-      </nav>  
+    </header>
+    
