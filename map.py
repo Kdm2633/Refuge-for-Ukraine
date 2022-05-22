@@ -8,4 +8,10 @@ m = folium.Map(location=[50.715, 24.213], zoom_start=4, min_zoom=4, max_zoom=7,t
 
 folium.Marker(location=[50.000, 25.0000], icon=folium.Icon(color="blue"), draggable=True).add_to(m)
 
+# Creating Markers
+folium.CircleMarker(location=[50.000, 25.0000],
+                    radius=50,
+                    color="red",
+                    fill_color="red").add_to(m)
+
 m.save('./templates/maps.html')
