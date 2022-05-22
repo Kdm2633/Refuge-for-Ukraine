@@ -3,24 +3,21 @@ import geopandas as gpd
 import folium
 from flask import Flask, render_template
 
-num = 5
-
 app = Flask('app')
-
-# @app.route('/')
-# def home():
-#   return 'Hello, World!'
-
 
 @app.route('/')
 def map():
     return render_template('Sorry.html')
 
 
-@app.route('/test')
-def homepage():
-    return render_template('index.html')
+@app.route('/howtohelp')
+def howtohelp():
+    return render_template('howtohelp.html')
 
+# @app.route('/')
+# def homepage():
+#     return render_template('index.html')
+  
 
 # Refugee Data
 refugee_data = pd.read_csv('data/UkraineRefugees.csv')
@@ -55,7 +52,7 @@ ukr_geo = gpd.read_file(
 
 healthcare_data = healthcare_data.dropna()
 # print(ukr_geo['name_1'])
-print(healthcare_data)
+#print(healthcare_data)
 
 # Mapping
 m = folium.Map(
@@ -79,9 +76,9 @@ plot_circles()
 # print("worked 2")
 custom_scale = (healthcare_data['Health_Facilities'].quantile(
     (0, 0.2, 0.4, 0.6, 0.8, 1))).tolist()
-folium.Choropleth(
+cp = folium.Choropleth(
     geo_data=ukr_geo,
-    name="choropleth",
+    name="Healthcare Facilities",
     data=healthcare_data,
     columns=["Region", "Health_Facilities"],
     key_on="feature.properties.name_1",
@@ -90,11 +87,22 @@ folium.Choropleth(
     fill_opacity=0.7,
     nan_fill_color="White",
     line_opacity=.1,
-    legend_name="Healthcare Facilities",
+    legend_name="Number of Healthcare Facilities in Each Province",
 ).add_to(m)
-print("worked 3")
+
+#  # creating a state indexed version of the dataframe so we can lookup values
+# province_data_indexed = refugee_data.set_index('Region')
+  
+#   # looping thru the geojson object and adding a new property(unemployment)
+#   # and assigning a value from our dataframe
+# for s in cp.geojson.data['name_1']:
+#     s['properties']['Health_Facilities'] =   province_data_indexed.loc[s['id'], 'Health_Facilities']
+  
+#   # and finally adding a tooltip/hover to the choropleth's geojson
+# folium.GeoJsonTooltip(['Region','Health_Facilities']).add_to(cp.geojson)
+
 
 folium.LayerControl().add_to(m)
 m.save('./templates/maps.html')
 
-app.run(host='0.0.0.0', port=8080)
+app.run(host='0.0.0.0', port=8080, debug=True)
