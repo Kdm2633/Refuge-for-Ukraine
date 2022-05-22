@@ -36,7 +36,7 @@ long = []
 lat = []
 
 def plot_circles(data):
-  for x in range (0, refugee_data[Name].len):
+  for x in range (0, refugee_data["Name"].len):
     print(x)
 
 # # Healthcare Facilities Data
