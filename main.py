@@ -7,7 +7,7 @@ app = Flask('app')
 # @app.route('/')
 # def home():
 #   return 'Hello, World!'
-
+  
 @app.route('/')
 def map():
     return render_template('maps.html')
@@ -29,6 +29,15 @@ pd.set_option('display.max_columns', 20)
 pd.set_option('display.width', 1000)
 pd.set_option('display.max_rows', 200)
 # print(refugee_data)
+
+#ploting bubbles on map
+#Arrays of country coordinates
+long = []
+lat = []
+
+def plot_circles(data):
+  for x in range (0, refugee_data[Name].len):
+    print(x)
 
 # # Healthcare Facilities Data
 healthcare_data = pd.read_csv('data/health_facilities.csv')
