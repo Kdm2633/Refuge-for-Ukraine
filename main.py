@@ -28,6 +28,7 @@ refugee_data = refugee_data.dropna(subset=cols, how='all')
 pd.set_option('display.max_columns', 20)
 pd.set_option('display.width', 1000)
 pd.set_option('display.max_rows', 200)
+pd.set_option()
 # print(refugee_data)
 
 #ploting bubbles on map
