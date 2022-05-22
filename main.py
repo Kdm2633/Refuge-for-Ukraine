@@ -84,6 +84,7 @@ plot_circles()
 custom_scale = (healthcare_data['Health_Facilities'].quantile(
     (0, 0.2, 0.4, 0.6, 0.8, 1))).tolist()
 
+
 folium.Choropleth(
     geo_data=ukr_geo,
     name="Healthcare Facilities",
@@ -98,8 +99,12 @@ folium.Choropleth(
     legend_name="Number of Healthcare Facilities in Each Province",
 ).add_to(m)
 
+healthcare_geo = ukr_geo.merge(healthcare_data,
+                                how='left',
+                                left_on=['name_1'],
+                                right_on=['Region'])
 
-folium.features.GeoJson(ukr_geo,
+folium.features.GeoJson(healthcare_geo,
                         name='Labels',
                         style_function=lambda x: {
                             'color': 'transparent',
@@ -107,8 +112,8 @@ folium.features.GeoJson(ukr_geo,
                             'weight': 0
                         },
                         tooltip=folium.features.GeoJsonTooltip(
-                            fields=['name_1'],
-                            aliases=['Health Facilities'],
+                            fields=['name_1', 'Health_Facilities'],
+                            aliases=['Province', 'Healthcare Facilities'],
                             labels=True,
                             sticky=False)).add_to(m)
 folium.LayerControl().add_to(m)
