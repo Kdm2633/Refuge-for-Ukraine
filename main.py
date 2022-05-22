@@ -5,8 +5,11 @@ from flask import Flask, render_template
 
 app = Flask('app')
 
-
 @app.route('/')
+def homepage():
+    return render_template('homepage.html')
+
+@app.route('/maps') 
 def map():
     return render_template('visualization.html')
 
@@ -15,10 +18,11 @@ def map():
 def howtohelp():
     return render_template('howtohelp.html')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
 
-# @app.route('/')
-# def homepage():
-#     return render_template('index.html')
+
 
 # Refugee Data
 refugee_data = pd.read_csv('data/UkraineRefugees.csv')
@@ -70,11 +74,16 @@ m = folium.Map(
     attr="mapbox")
 folium.GeoJson(data=ukr_geo["geometry"]).add_to(m)
 
+#file = open("static/js/app.js", "r")
+#value = True
+#
+#print(value)
 
+df = pd.DataFrame(refugee_data)
 def plot_circles():
     for x in range(0, len(refugee_data["Name"])):
         folium.CircleMarker(location=[latitude[x], long[x]],
-                            radius=50,
+                            radius=float(refugee_data.iloc[x]["2022-05-16"])/100000,
                             color="blue",
                             fill_color="blue").add_to(m)
 

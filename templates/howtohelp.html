@@ -1,0 +1,28 @@
+{% include 'components/mapheader.html' %}
+   <section id="section">
+        <img src="static/assets/protest.webp" alt="" id="protest-img">
+        <h1 id="intro">How To Help...</h1>
+        <a href="#info" id="btn">Learn More</a>
+    </section>
+
+    <section id="info">
+        <h2>Please Donate</h2>
+        <h3>Organization 1</h3>
+        <p>Direct Relief is working directly with Ukraine’s Ministry of Health and other on-the-ground partners to provide urgently needed medical aid, including emergency response packs intended for first responders, oxygen concentrators, critical care medicines, and more. <a href="https://secure.directrelief.org/site/Donation2;jsessionid=00000000.app20060b?df_id=2924&mfc_pref=T&2924.donation=form1&NONCE_TOKEN=7FA0E1E42AF1A77CCDFBFC85BABE57B9" target="_blank">To Donate Click Here</a></p>
+        <h3>Organization 2</h3>
+        <p>UNICEF has been working nonstop in eastern Ukraine, delivering lifesaving programs for affected children and families as fighting has taken an increasingly heavy toll on the civilian population of 3.4 million people — including 510,000 children — living in the Donbas region.<a href="https://www.unicefusa.org/stories/unicef-children-crossfire-ukraine-crisis/39542?form=donate&utm_campaign=20220225_Emergencies&utm_medium=Organic&utm_source=UkraineWebStoryChildrenFeb2022&utm_content=LearnMoreUkraineWebStoryChildrenFeb2022&ms=Organic_PRL_2022_Emergencies_20220225_UkraineWebStoryChildrenFeb2022_LearnMoreUkraineWebStoryChildrenFeb2022_none_none&initialms=Organic_PRL_2022_Emergencies_20220225_UkraineWebStoryChildrenFeb2022_LearnMoreUkraineWebStoryChildrenFeb2022_none_none" target="_blank">To Donate Click Here</a></p>
+        <h3>Organization 3</h3>
+        <P>The Red Cross is often on the frontlines of war serving to help those affected by armed conflict. The Ukrainian Red Cross is currently assisting people inside the country by aiding evacuations and providing shelter, food and basic necessities. <a href="https://donate.redcrossredcrescent.org/ua/donate/~my-donation?_cv=1" target="_blank">To Donate Click Here</a></P>
+    </section>
+<script>
+  function removeClass() {
+  var element = document.getElementById("nav-item");
+  element.classList.remove("active-mobile");
+  var active = document.getElementById("help");
+  active.classList.add("active-mobile");
+  }
+  removeClass();
+  
+</script>
+{% include 'components/footer.html' %}
+

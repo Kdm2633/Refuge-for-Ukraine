@@ -9,7 +9,7 @@
      <script src="https://kit.fontawesome.com/4336aaf0f1.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
      <!-- Fonts -->
-     <style>@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Roboto&display=swap');</style>
+     <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');</style>
     <!-- Styles -->
     <!--  -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/homepage/style.css') }}">
@@ -17,20 +17,20 @@
 </head>
 <body>
     <header id="header">
-            <a href="{{ url_for('index') }}" class="logo">Placeholder</a>
+            <a href="/" class="logo">Refuge for Ukraine</a>
             <ul id="desktop-nav">
-                <li id="active-desktop"><a href="{{ url_for('index') }}">Home</a></li>
-                <li><a href="{{ url_for('maps') }}">Visualization</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="{{ url_for('howtohelp') }}">How To Help</a></li>
+                <li id="active-desktop"><a href="/">Home</a></li>
+                <li><a href="/maps">Data Visualization</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/howtohelp">How To Help</a></li>
             </ul>
         <div id="mobile-nav">
-            <a href="{{ url_for('index') }}" class="mobile-logo">Placeholder</a>
+            <a href="/" class="mobile-logo">Refuge for Ukraine</a>
             <div id="nav-items">
-                <a class="active-mobile" href="{{ url_for('index') }}" class="">Home</a>
-                <a href="{{ url_for('maps') }}" class="">Vizualization</a>
-                <a href="" class="">About</a>
-                <a href="{{ url_for('howtohelp') }}">How To Help</a>
+                <a class="active-mobile" href="/" class="">Home</a>
+                <a href="/maps" class="">Data Visualization</a>
+                <a href="/about" class="">About</a>
+                <a href="/howtohelp">How To Help</a>
             </div>
             <a href="javascript:void(0)" class="icon" onclick="Open()"><i class="fa fa-bars fa-2x"></i></a>
         </div>

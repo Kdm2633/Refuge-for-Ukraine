@@ -1,0 +1,21 @@
+{% include 'components/mapheader.html' %}
+<section>
+      <h1>About</h1>
+      <h2>Why We Chose This Data</h2>
+      <p>This data shows how Ukrainians have been impacted by the Russia-Ukraine war as they have had to flee from their homes. It also shows the lack of resources and access to healthcare they are facing as a result.</p>
+      <h2>Why The Data Is Important</h2>
+      <p>This data is important because gives people a perspective on the wider trends of a war. By showing this data using data visualization, people can easily see the trends occuring and be well-educated about the state of Ukraine so they can help.</p>
+      <h2>Data's Relationship To Worldwide Trends</h2>
+      <p>The entire world is being affected by the Russia-Ukraine war as Ukraines seek refuge in other countries and tensions between countries arise. This data shows how the entire world is being affected through visualizing refugee movement.</p>
+  </section>
+
+<script>
+  function removeClass() {
+  var element = document.getElementById("nav-item");
+  element.classList.remove("active-mobile");
+  var active = document.getElementById("about");
+  active.classList.add("active-mobile");
+  }
+  removeClass();
+</script>
+{% include 'components/footer.html' %}

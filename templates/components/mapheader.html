@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Pyscript link 
+   <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+    <script defer src="https://pyscript.net/alpha/pyscript.js"></script>-->
     </script>
      <!--Font Awesome-->
      <script src="https://kit.fontawesome.com/4336aaf0f1.js" crossorigin="anonymous"></script>
      <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
      <!-- Fonts -->
-     <style>@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@700;900&family=Roboto&display=swap');</style>
+     <style>@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700;900&display=swap');</style>
     <!-- Styles -->
     <!--  -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/map/style.css') }}">
@@ -17,20 +20,20 @@
 </head>
 <body>
     <header id="header">
-            <a href="index.html" class="logo">Placeholder</a>
+            <a href="/" class="logo">Refuge for Ukraine</a>
             <ul id="desktop-nav">
-                <li id="active-desktop"><a href="">Home</a></li>
-                <li><a href="">Refugee Movements</a></li>
-                <li><a href="">Donate</a></li>
-                <li><a href="">About</a></li>
+                <li id="active-desktop"><a href="/">Home</a></li>
+                <li><a href="/maps">Data Visualization</a></li>
+                <li><a href="/howtohelp">How To Help</a></li>
+                <li><a href="/about">About</a></li>
             </ul>
         <div id="mobile-nav">
-            <a href="index.html" class="mobile-logo">Placeholder</a>
+            <a href="/" class="mobile-logo">Refuge for Ukraine</a>
             <div id="nav-items">
-                <a class="active-mobile" href="index.html" class="">Home</a>
-                <a href="" class="">Refugee Movements</a>
-                <a href="" class="">Donate</a>
-                <a href="">About</a>
+                <a id="nav-item" class="active-mobile" href="/" class="">Home</a>
+                <a id="nav-item data" href="/maps" class="">Data Visualization</a>
+                <a  id="nav-item help" href="/howtohelp" class="">How To Help</a>
+                <a id="nav-item about" href="/about">About</a>
             </div>
             <a href="javascript:void(0)" class="icon" onclick="Open()"><i class="fa fa-bars fa-2x"></i></a>
         </div>

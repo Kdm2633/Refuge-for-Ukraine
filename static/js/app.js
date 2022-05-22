@@ -8,3 +8,7 @@ function Open() {
     }
   }
 
+/*var slide = document.getElementById("aSlider");
+var value = slide.value();
+
+*/ //scrapping json idea, going to try to directly pull it w python

@@ -2,7 +2,15 @@
 
 {% include 'maps.html' %}
 
-{% include 'slider.html' %}
-
+<!--{% include 'slider.html' %}-->
+<script>
+  function removeClass() {
+  var element = document.getElementById("nav-item");
+  element.classList.remove("active-mobile");
+  var active = document.getElementById("visualization");
+  active.classList.add("active-mobile");
+  }
+  removeClass();
+</script>
 {% include 'components/footer.html' %}
 

@@ -170,8 +170,10 @@ font-family: 'Roboto', sans-serif; */
     #mobile-nav a.icon {
       border-radius: 10px;
       display: block;
+      z-index: 100000;
       position: absolute;
       right: 0;
+      margin: 0;
       top: 0;
     }
   
@@ -207,6 +209,7 @@ font-family: 'Roboto', sans-serif; */
     @media (min-width: 540px), (max-width: 590px) {
       #space {
         width: 100%;
+        z-index: -1100000;
       }
     }
     #btn {
@@ -230,6 +233,14 @@ font-family: 'Roboto', sans-serif; */
   
     .about-section p {
       font-size: 1.5rem;
+    }
+
+    p {
+      font-size: 1.5rem;
+    }
+    h3 {
+      margin-top: 5%;
+      text-decoration: underline;
     }
   }
   
