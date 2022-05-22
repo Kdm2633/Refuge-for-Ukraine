@@ -69,7 +69,7 @@ folium.Choropleth(
     line_opacity=.1,
     legend_name="Healthcare Facilities",
 ).add_to(m)
-# print("worked 3")
+print("worked 3")
 
 folium.LayerControl().add_to(m)
 m.save('./templates/maps.html')
