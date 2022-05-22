@@ -10,7 +10,7 @@ app = Flask('app')
   
 @app.route('/')
 def map():
-    return render_template('maps.html')
+    return render_template('Sorry.html')
 
 @app.route('/test')
 def homepage():
@@ -35,10 +35,11 @@ pd.set_option('display.max_rows', 200)
 long = []
 lat = []
 
-def plot_circles(data):
-  for x in range (0, refugee_data["Name"].len):
-    print(x)
+def plot_circles():
+  #for x in range (0, refugee_data["Name"].len):
+  print(refugee_data["Name"])
 
+plot_circles()
 # # Healthcare Facilities Data
 healthcare_data = pd.read_csv('data/health_facilities.csv')
 ukr_geo = gpd.read_file('data/ukr_geo.json')  #administrative divisions shapefile
@@ -55,7 +56,6 @@ m = folium.Map(
     attr="mapbox")
 folium.GeoJson(data=ukr_geo["geometry"]).add_to(m)
 # Creating Markers
-print("worked 1")
 folium.CircleMarker(location=[50.000, 25.0000], radius=50,color="red",fill_color="red").add_to(m)
 # print("worked 2")
 folium.Choropleth(
